@@ -42,12 +42,19 @@ int main(){
     // int sum = a + b;
     // cout << sum << endl;
 
-    int a = 10;
+    // int a = 10;
 
-    // int b = ++a;
-    int b = a--;
-    cout << "b = " << b << endl;
-    cout << "a = " << a << endl;
+    // // int b = ++a;
+    // int b = a--;
+    // cout << "b = " << b << endl;
+    // cout << "a = " << a << endl;
+
+    //operator in c++
+
+    // arithmetic , relational, unary, logical
+    // +, -, *, /, %
+    // ==, +=, -=, *=, >=, <=, >, <
+    // ||, &&, !
 
     return 0;
 }
