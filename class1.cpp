@@ -1,60 +1,27 @@
 #include <iostream>
+#include<vector>
 using namespace std;
 
 int main(){
-
-    // primitive dataTypes
-
-    // int, char, float, bool, double
-    // int age = 3;
-    // char ch = 12;
-    // float PI = 3.14f;
-    // bool isSafe = true;
-    // double price = 100.99;
-    // cout << sizeof(age) << endl;
-    // cout << sizeof(ch) << endl;
-    // cout << sizeof(PI) << endl;
-    // cout << sizeof(isSafe) << endl;
-    // cout << sizeof(price) << endl;
-    // cout << "my name is Aditya" << endl << "Yadav" << endl;
-
-    // type casting
-    // char grade = 'A';
-    // double price = 100.99;
-
-    // int newPrice = (int)price;
-    // cout << newPrice << endl;
-    // int value = grade;
-    // cout << value << endl;
-
-    // double price;
-    // cout << "Enter your price :";
-    // cin >> price;
-
-    // cout << "your age is : " << price << endl;
-
-    // int a, b;
-    // cout << "enter first number : ";
-    // cin >> a;
+    vector<int> vec;
     
-    // cout << "enter secound number : ";
-    // cin >> b;
-    // int sum = a + b;
-    // cout << sum << endl;
 
-    // int a = 10;
+    cout << "size of vec = " << vec.size() << endl;
+    vec.push_back(25);
+    vec.push_back(35);
+    vec.push_back(45);
+    cout << "after push back the size of vector = " << vec.size() << endl;
 
-    // // int b = ++a;
-    // int b = a--;
-    // cout << "b = " << b << endl;
-    // cout << "a = " << a << endl;
+    vec.pop_back();
+    cout << "after pop back the size of vector = " << vec.size() << endl;
+    for (int val : vec){
+        cout << val << endl;
+    }
 
-    //operator in c++
+    cout << vec.front() << endl;
+    cout << vec.back() << endl;
 
-    // arithmetic , relational, unary, logical
-    // +, -, *, /, %
-    // ==, +=, -=, *=, >=, <=, >, <
-    // ||, &&, !
+    cout << vec.at(1) << endl;
 
     return 0;
 }
