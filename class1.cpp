@@ -1,28 +1,24 @@
 #include <iostream>
-#include<vector>
 using namespace std;
 
-int main(){
-    vector<int> vec;
-    
+int main()
+{
 
-    cout << "size of vec = " << vec.size() << endl;
-    vec.push_back(25);
-    vec.push_back(35);
-    vec.push_back(45);
-    cout << "after push back the size of vector = " << vec.size() << endl;
+    int arr[] = {12, 34, 50, -2, 1000, 2000 ,12121, 2, 0, 1212, -121212};
+    int size = 11;
+    int maxVal = arr[0];
+    int minVal = arr[0];
 
-    vec.pop_back();
-    cout << "after pop back the size of vector = " << vec.size() << endl;
-    for (int val : vec){
-        cout << val << endl;
+    for (int i = 0; i < size; i++){
+        if(arr[i] > maxVal){
+            maxVal = arr[i];
+        }
+        if(arr[i] < minVal){
+            minVal = arr[i];
+        }
     }
 
-    cout << vec.front() << endl;
-    cout << vec.back() << endl;
-
-    cout << vec.at(1) << endl;
-
-    return 0;
+    cout << "minVal : " << minVal << endl;
+    cout << "maxVal : " << maxVal << endl;
+        return 0;
 }
-
