@@ -1,19 +1,25 @@
 #include <iostream>
 using namespace std;
 
-void ChangeArray(int arr[], int size){
-    for(int i = 0; i < size; i++){
-        arr[i] = 2 * arr[i];
-    }
-}
 int main()
 {
-    int arr[] = {1, 2, 3};
-    ChangeArray(arr, 3);
+    int target = 8;
+    int arr[] = {12, 34, 45, 89, 8, 10};
+    int size = sizeof(arr) / sizeof(int);
 
-    cout << "in main\n";
-    for(int i= 0; i <3; i++){
-        cout <<  arr[i] << " ";
-    } 
+    bool found = false;
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] == target)
+        {
+            cout << "target found at index : " << i << endl;
+            found = true;
+            break;
+        }
+    }
+    if (!found)
+    {
+        cout << "not found!";
+    }
     return 0;
 }
