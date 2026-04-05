@@ -1,25 +1,25 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int target = 8;
-    int arr[] = {12, 34, 45, 89, 8, 10};
-    int size = sizeof(arr) / sizeof(int);
 
-    bool found = false;
-    for (int i = 0; i < size; i++)
-    {
-        if (arr[i] == target)
-        {
-            cout << "target found at index : " << i << endl;
-            found = true;
-            break;
-        }
+int main(){
+    int arr[] = {1, 3, 4, 5, 6};
+    int size = sizeof(arr) / sizeof(int);
+    int start = 0;
+    int end = size - 1;
+    
+
+    while(start < end){
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+
+        start++;
+        end--;
     }
-    if (!found)
-    {
-        cout << "not found!";
+
+    for(int i = 0; i< size; i++){
+        cout << arr[i] << " ";
     }
     return 0;
 }
