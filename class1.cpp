@@ -1,24 +1,18 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int main() {
-    int arr[] = {1, 2, 2, 3, 4, 3, 5};
+int main(){
+    int arr[] = {20, 33, -21, 121, -33};
     int size = sizeof(arr) / sizeof(int);
-
-    for(int i = 0; i < size; i++) {
-        bool isUnique = true;
-
-        for(int j = i + 1; j < size; j++) {
-            if(arr[i] == arr[j]) {
-                isUnique = false;
-                break;
+    for(int st = 0; st < size; st++){
+        for(int end = st; end < size; end++){
+            for(int i = st; i <= end; i++){
+                cout << arr[i];
             }
+            cout << " ";
         }
-
-        if(isUnique) {
-            cout << arr[i] << " ";
-        }
+        cout << endl;
     }
-
     return 0;
 }
