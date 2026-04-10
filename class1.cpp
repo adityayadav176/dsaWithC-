@@ -3,25 +3,33 @@
 #include <climits>
 using namespace std;
 
-vector<int> pairSum(vector<int>  nums, int target){
-    vector<int> ans;
-    int n = nums.size();
 
-    for(int i = 0; i < n; i++){
-        for(int j = i + 1; j <n; j++){
-            if(nums[i] + nums[j] == target){
-                ans.push_back(i);
-                ans.push_back(j);
-                return ans;
-            }
-        }
+double myPow(double x, int n){
+    if(n == 1) return 1.0;
+    if(n == 0) return 0.0;
+    if(x == 1) return 1.0;
+    // if(x = -1 && n%2 == 0) return 1.0;
+    // if(x = -1 && n%2 != 0) return -1.0;
+   
+    long binForm = n;
+     if(n < 0){
+        x = 1/x;
+        binForm = -binForm;
     }
+    double ans = 1;
+
+    while(binForm > 0){
+        if(binForm % 2 == 1){
+            ans *= x;
+        }
+
+        x *= x;
+        binForm /= 2;
+    }
+
     return ans;
 }
+
 int main(){
-    vector<int> nums = {2, 7, 11, 15};
-    int target = 9;
-    vector<int> ans = pairSum( nums, target);
-    cout << ans[0] << "," << ans[1] << endl;
-    return 0;
+    cout << myPow(2, 3) << endl; 
 }
